@@ -30,7 +30,7 @@ jobs:
           npx book sm -t "[Rollup 中文文档](https://github.com/rollup/rollupjs.org)" -i node_modules
           rm -rf node_modules package.json package-lock.json
           ls -la
-          cp 00-introduction.md README.md
+          mv 00-introduction.md README.md
       - name: Push docs src
         if: github.event_name == 'push'
         uses: docker://pcit/pages
