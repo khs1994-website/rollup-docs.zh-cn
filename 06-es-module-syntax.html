@@ -1,0 +1,386 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ES模块语法 · Rollup 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="999-big-list-of-options.html" />
+    
+    
+    <link rel="prev" href="05-tools.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-faqs.html">
+            
+                <a href="01-faqs.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-tutorial.html">
+            
+                <a href="02-tutorial.html">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-command-line-reference.html">
+            
+                <a href="03-command-line-reference.html">
+            
+                    
+                    命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-javascript-api.html">
+            
+                <a href="04-javascript-api.html">
+            
+                    
+                    Java Script API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-tools.html">
+            
+                <a href="05-tools.html">
+            
+                    
+                    Rollup 与其他工具集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="06-es-module-syntax.html">
+            
+                <a href="06-es-module-syntax.html">
+            
+                    
+                    ES模块语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    大选项列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ES模块语法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x65E8;&#x5728;&#x5BF9;<a href="https://www.ecma-international.org/ecma-262/6.0/" target="_blank">ES2015&#x89C4;&#x8303;</a>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6A21;&#x5757;&#x884C;&#x4E3A;&#x505A;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x53C2;&#x8003;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;&#x5BFC;&#x5165;&#x548C;&#x5BFC;&#x51FA;&#x8BED;&#x53E5;&#x7684;&#x6B63;&#x786E;&#x7406;&#x89E3;&#x5BF9;&#x4E8E;&#x6210;&#x529F;&#x4F7F;&#x7528;Rollup&#x662F;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x7684;&#x3002;</p>
+<h3 id="&#x5BFC;&#x5165;importing">&#x5BFC;&#x5165;(Importing)</h3>
+<p>&#x5BFC;&#x5165;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x91CD;&#x65B0;&#x5206;&#x914D;&#xFF0C;&#x5C3D;&#x7BA1;&#x5BFC;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x88AB;&#x4FEE;&#x6539;&#xFF08;&#x5BFC;&#x51FA;&#x6A21;&#x5757;&#xFF0C;&#x4EE5;&#x53CA;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7684;&#x5BFC;&#x5165;&#xFF0C;&#x90FD;&#x5C06;&#x53D7;&#x5230;&#x8BE5;&#x4FEE;&#x6539;&#x7684;&#x5F71;&#x54CD;&#xFF09;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x884C;&#x4E3A;&#x4E0E;const&#x58F0;&#x660E;&#x7C7B;&#x4F3C;&#x3002;</p>
+<h4 id="&#x547D;&#x540D;&#x5BFC;&#x5165;named-imports">&#x547D;&#x540D;&#x5BFC;&#x5165;(Named Imports)</h4>
+<p>&#x4ECE;&#x6E90;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x5176;&#x539F;&#x59CB;&#x540D;&#x79F0;&#x7684;&#x7279;&#x5B9A;&#x9879;&#x76EE;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> something <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./module.js&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4ECE;&#x6E90;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x7279;&#x5B9A;&#x9879;&#xFF0C;&#x5E76;&#x5728;&#x5BFC;&#x5165;&#x65F6;&#x6307;&#x5B9A;&#x81EA;&#x5B9A;&#x4E49;&#x540D;&#x79F0;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> something <span class="token keyword">as</span> somethingElse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./module.js&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5BFC;&#x5165;namespace-imports">&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5BFC;&#x5165;(Namespace Imports)</h4>
+<p>&#x5C06;&#x6E90;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x5BFC;&#x5165;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x6E90;&#x6A21;&#x5757;&#x7684;&#x547D;&#x540D;&#x5BFC;&#x51FA;&#x516C;&#x5F00;&#x4E3A;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x88AB;&#x6392;&#x9664;&#x5728;&#x6B64;&#x5BF9;&#x8C61;&#x4E4B;&#x5916;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> module <span class="token keyword">from</span> <span class="token string">&apos;./module.js&apos;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x201C;something&#x201D;&#x7684;&#x4F8B;&#x5B50;&#x5C06;&#x88AB;&#x9644;&#x52A0;&#x5230;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x7684;&#x5BFC;&#x5165;&#x5BF9;&#x8C61;&#x4E0A;&#x3002;&#x201C;module.something&#x201D;&#x3002;</p>
+<h4 id="&#x9ED8;&#x8BA4;&#x5BFC;&#x5165;default-import">&#x9ED8;&#x8BA4;&#x5BFC;&#x5165;(Default Import)</h4>
+<p>&#x5BFC;&#x5165;&#x6E90;&#x6587;&#x4EF6;&#x7684;<strong>&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;</strong></p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> something <span class="token keyword">from</span> <span class="token string">&apos;./module.js&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x7A7A;&#x7684;&#x5BFC;&#x5165;empty-import">&#x7A7A;&#x7684;&#x5BFC;&#x5165;(Empty Import)</h4>
+<p>&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x4E0D;&#x8981;&#x521B;&#x5EFA;&#x4EFB;&#x4F55;&#x65B0;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">import</span> <span class="token string">&apos;./module.js&apos;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x5BF9;&#x4E8E;polyfills&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x5F53;&#x5BFC;&#x5165;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x4E0E;&#x539F;&#x578B;&#x6709;&#x5173;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<h3 id="&#x5BFC;&#x51FA;exporting">&#x5BFC;&#x51FA;(Exporting)</h3>
+<h4 id="&#x547D;&#x540D;&#x5BFC;&#x51FA;named-exports">&#x547D;&#x540D;&#x5BFC;&#x51FA;(Named exports)</h4>
+<p>&#x5BFC;&#x51FA;&#x4EE5;&#x524D;&#x58F0;&#x660E;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> something <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span> something <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5728;&#x5BFC;&#x51FA;&#x65F6;&#x91CD;&#x547D;&#x540D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">export</span> <span class="token punctuation">{</span> something <span class="token keyword">as</span> somethingElse <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x58F0;&#x660E;&#x540E;&#x7ACB;&#x5373;&#x5BFC;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x8FD9;&#x53EF;&#x4EE5;&#x4E0E; `var`, `let`, `const`, `class`, and `function` &#x914D;&#x5408;&#x4F7F;&#x7528;</span>
+<span class="token keyword">export</span> <span class="token keyword">var</span> something <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;default-export">&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;(Default Export)</h4>
+<p>&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#x4F5C;&#x4E3A;&#x6E90;&#x6A21;&#x5757;&#x7684;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">export</span> <span class="token keyword">default</span> something<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4EC5;&#x5F53;&#x6E90;&#x6A21;&#x5757;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BFC;&#x51FA;&#x65F6;&#xFF0C;&#x624D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x6B64;&#x505A;&#x6CD5;&#x3002;</p>
+<p>&#x5C06;&#x9ED8;&#x8BA4;&#x548C;&#x547D;&#x540D;&#x5BFC;&#x51FA;&#x7EC4;&#x5408;&#x5728;&#x540C;&#x4E00;&#x6A21;&#x5757;&#x4E2D;&#x662F;&#x4E0D;&#x597D;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x5C3D;&#x7BA1;&#x5B83;&#x662F;&#x89C4;&#x8303;&#x5141;&#x8BB8;&#x7684;&#x3002;</p>
+<h3 id="&#x7ED1;&#x5B9A;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;how-bindings-work">&#x7ED1;&#x5B9A;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;(How bindings work)</h3>
+<p>ES&#x6A21;&#x5757;&#x5BFC;&#x51FA;<em>&#x5B9E;&#x65F6;&#x7ED1;&#x5B9A;</em>&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x6700;&#x521D;&#x6839;&#x636E;<a href="https://rollupjs.org/repl/?shareable=JTdCJTIybW9kdWxlcyUyMiUzQSU1QiU3QiUyMm5hbWUlMjIlM0ElMjJtYWluLmpzJTIyJTJDJTIyY29kZSUyMiUzQSUyMmltcG9ydCUyMCU3QiUyMGNvdW50JTJDJTIwaW5jcmVtZW50JTIwJTdEJTIwZnJvbSUyMCcuJTJGaW5jcmVtZW50ZXIuanMnJTNCJTVDbiU1Q25jb25zb2xlLmxvZyhjb3VudCklM0IlNUNuaW5jcmVtZW50KCklM0IlNUNuY29uc29sZS5sb2coY291bnQpJTNCJTIyJTdEJTJDJTdCJTIybmFtZSUyMiUzQSUyMmluY3JlbWVudGVyLmpzJTIyJTJDJTIyY29kZSUyMiUzQSUyMmV4cG9ydCUyMGxldCUyMGNvdW50JTIwJTNEJTIwMCUzQiU1Q24lNUNuZXhwb3J0JTIwZnVuY3Rpb24lMjBpbmNyZW1lbnQoKSUyMCU3QiU1Q24lNUN0Y291bnQlMjAlMkIlM0QlMjAxJTNCJTVDbiU3RCUyMiU3RCU1RCUyQyUyMm9wdGlvbnMlMjIlM0ElN0IlMjJmb3JtYXQlMjIlM0ElMjJjanMlMjIlMkMlMjJnbG9iYWxzJTIyJTNBJTdCJTdEJTJDJTIybW9kdWxlSWQlMjIlM0ElMjIlMjIlMkMlMjJuYW1lJTIyJTNBJTIybXlCdW5kbGUlMjIlN0QlMkMlMjJleGFtcGxlJTIyJTNBbnVsbCU3RA==" target="_blank">&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;</a>&#x5BFC;&#x5165;&#x540E;&#x66F4;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// incrementer.js</span>
+<span class="token keyword">export</span> <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-js"><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> count<span class="token punctuation">,</span> increment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;./incrementer.js&apos;</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0</span>
+<span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+
+count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// Error &#x2014; &#x53EA;&#x6709; incrementer.js &#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x8FD9;&#x4E2A;&#x503C;&#x3002;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-tools.html" class="navigation navigation-prev " aria-label="Previous page: Rollup 与其他工具集成">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="999-big-list-of-options.html" class="navigation navigation-next " aria-label="Next page: 大选项列表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ES模块语法","level":"1.6","depth":1,"next":{"title":"大选项列表","level":"1.7","depth":1,"path":"999-big-list-of-options.md","ref":"999-big-list-of-options.md","articles":[]},"previous":{"title":"Rollup 与其他工具集成","level":"1.5","depth":1,"path":"05-tools.md","ref":"05-tools.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"06-es-module-syntax.md","mtime":"2019-12-29T00:08:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-29T00:09:15.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

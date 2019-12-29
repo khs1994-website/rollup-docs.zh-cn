@@ -1,0 +1,413 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>命令行 · Rollup 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04-javascript-api.html" />
+    
+    
+    <link rel="prev" href="02-tutorial.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-faqs.html">
+            
+                <a href="01-faqs.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-tutorial.html">
+            
+                <a href="02-tutorial.html">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="03-command-line-reference.html">
+            
+                <a href="03-command-line-reference.html">
+            
+                    
+                    命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-javascript-api.html">
+            
+                <a href="04-javascript-api.html">
+            
+                    
+                    Java Script API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-tools.html">
+            
+                <a href="05-tools.html">
+            
+                    
+                    Rollup 与其他工具集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-es-module-syntax.html">
+            
+                <a href="06-es-module-syntax.html">
+            
+                    
+                    ES模块语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    大选项列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >命令行</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4F7F;&#x7528;Rollup&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4EFD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x53EF;&#x8981;&#x53EF;&#x4E0D;&#x8981;&#xFF09;&#x6765;&#x7B80;&#x5316;&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x80FD;&#x542F;&#x7528;Rollup&#x7684;&#x9AD8;&#x7EA7;&#x7279;&#x6027;</p>
+<h3 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;configuration-files">&#x914D;&#x7F6E;&#x6587;&#x4EF6;(Configuration files)</h3>
+<p>Rollup&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x5F88;&#x5F3A;&#x5927;&#xFF0C;&#x800C;&#x4E14;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F60;&#x4F7F;&#x7528;</p>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;ES6&#x6A21;&#x5757;&#xFF0C;&#x5B83;&#x5BF9;&#x5916;&#x66B4;&#x9732;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;Rollup&#x9700;&#x8981;&#x7684;&#x4E00;&#x4E9B;&#x9009;&#x9879;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53EB;&#x505A;<code>rollup.config.js</code>&#xFF0C;&#x5B83;&#x901A;&#x5E38;&#x4F4D;&#x4E8E;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;</p>
+<p>&#x4ED4;&#x7EC6;&#x67E5;&#x9605;&#x8FD9;&#x4E2A;<a href="guide/zh#big-list-of-options">&#x5305;&#x529E;&#x5927;&#x91CF;&#x9009;&#x9879;&#x7684;&#x6E05;&#x5355;</a>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x8981;&#x628A;&#x5B83;&#x914D;&#x7F6E;&#x5230;&#x4F60;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">// rollup.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// &#x6838;&#x5FC3;&#x9009;&#x9879;</span>
+  input<span class="token punctuation">,</span>     <span class="token comment">// &#x5FC5;&#x987B;</span>
+  external<span class="token punctuation">,</span>
+  plugins<span class="token punctuation">,</span>
+
+  <span class="token comment">// &#x989D;&#x5916;&#x9009;&#x9879;</span>
+  onwarn<span class="token punctuation">,</span>
+
+  <span class="token comment">// danger zone</span>
+  acorn<span class="token punctuation">,</span>
+  context<span class="token punctuation">,</span>
+  moduleContext<span class="token punctuation">,</span>
+  legacy
+
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>  <span class="token comment">// &#x5FC5;&#x987B; (&#x5982;&#x679C;&#x8981;&#x8F93;&#x51FA;&#x591A;&#x4E2A;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;)</span>
+    <span class="token comment">// &#x6838;&#x5FC3;&#x9009;&#x9879;</span>
+    file<span class="token punctuation">,</span>    <span class="token comment">// &#x5FC5;&#x987B;</span>
+    format<span class="token punctuation">,</span>  <span class="token comment">// &#x5FC5;&#x987B;</span>
+    name<span class="token punctuation">,</span>
+    globals<span class="token punctuation">,</span>
+
+    <span class="token comment">// &#x989D;&#x5916;&#x9009;&#x9879;</span>
+    paths<span class="token punctuation">,</span>
+    banner<span class="token punctuation">,</span>
+    footer<span class="token punctuation">,</span>
+    intro<span class="token punctuation">,</span>
+    outro<span class="token punctuation">,</span>
+    sourcemap<span class="token punctuation">,</span>
+    sourcemapFile<span class="token punctuation">,</span>
+    interop<span class="token punctuation">,</span>
+
+    <span class="token comment">// &#x9AD8;&#x5371;&#x9009;&#x9879;</span>
+    exports<span class="token punctuation">,</span>
+    amd<span class="token punctuation">,</span>
+    indent
+    strict
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F60;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x624D;&#x80FD;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x628A;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x6253;&#x5305;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x51FA;&#x591A;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li>&#x4F7F;&#x7528;Rollup&#x63D2;&#x4EF6;, &#x4F8B;&#x5982; <a href="https://github.com/rollup/rollup-plugin-node-resolve" target="_blank">rollup-plugin-node-resolve</a> &#x548C; <a href="https://github.com/rollup/rollup-plugin-commonjs" target="_blank">rollup-plugin-commonjs</a> &#x3002;&#x8FD9;&#x4E24;&#x4E2A;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x52A0;&#x8F7D;Node.js&#x91CC;&#x9762;&#x7684;CommonJS&#x6A21;&#x5757;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;Rollup&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8BB0;&#x5F97;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x91CC;&#x52A0;&#x4E0A;<code>--config</code>&#x6216;&#x8005;<code>-c</code></p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;rollup.config.js</span>
+$ rollup --config
+
+<span class="token comment"># &#x6216;&#x8005;, &#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;my.config.js&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+$ rollup --config my.config.js
+</code></pre>
+<h3 id="&#x547D;&#x4EE4;&#x884C;&#x7684;&#x53C2;&#x6570;command-line-flags">&#x547D;&#x4EE4;&#x884C;&#x7684;&#x53C2;&#x6570;(Command line flags)</h3>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x9009;&#x9879;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x53C2;&#x6570;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x8FD9;&#x91CC;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x91CD;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x60F3;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x7684;&#x8BDD;&#xFF0C;&#x4ED4;&#x7EC6;&#x67E5;&#x9605;&#x8FD9;&#x4E2A;<a href="guide/zh#big-list-of-options">&#x5305;&#x529E;&#x5927;&#x91CF;&#x9009;&#x9879;&#x7684;&#x6E05;&#x5355;</a></p>
+<pre class="language-"><code class="lang-text">-i, --input <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filename</span><span class="token punctuation">&gt;</span></span>      &#x8981;&#x6253;&#x5305;&#x7684;&#x6587;&#x4EF6;&#xFF08;&#x5FC5;&#x987B;&#xFF09;
+-o, --file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>output</span><span class="token punctuation">&gt;</span></span>         &#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6; (&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;)
+-f, --format <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>format</span><span class="token punctuation">&gt;</span></span>       &#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B; (amd, cjs, esm, iife, umd)
+-e, --external <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ids</span><span class="token punctuation">&gt;</span></span>        &#x5C06;&#x6A21;&#x5757;ID&#x7684;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5217;&#x8868;&#x6392;&#x9664;
+-g, --globals <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pairs</span><span class="token punctuation">&gt;</span></span>       &#x4EE5;`module ID:Global` &#x952E;&#x503C;&#x5BF9;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5F00; 
+                              &#x4EFB;&#x4F55;&#x5B9A;&#x4E49;&#x5728;&#x8FD9;&#x91CC;&#x6A21;&#x5757;ID&#x5B9A;&#x4E49;&#x6DFB;&#x52A0;&#x5230;&#x5916;&#x90E8;&#x4F9D;&#x8D56;
+-n, --name <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>           &#x751F;&#x6210;UMD&#x6A21;&#x5757;&#x7684;&#x540D;&#x5B57;
+-h, --help                  &#x8F93;&#x51FA; help &#x4FE1;&#x606F;
+-m, --sourcemap             &#x751F;&#x6210; sourcemap (`-m inline` for inline map)
+--amd.id                    AMD&#x6A21;&#x5757;&#x7684;ID&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4E2A;&#x533F;&#x540D;&#x51FD;&#x6570;
+--amd.define                &#x4F7F;&#x7528;Function&#x6765;&#x4EE3;&#x66FF;`define`
+--no-strict                 &#x5728;&#x751F;&#x6210;&#x7684;&#x5305;&#x4E2D;&#x7701;&#x7565;`&quot;use strict&quot;;`
+--no-conflict               &#x5BF9;&#x4E8E;UMD&#x6A21;&#x5757;&#x6765;&#x8BF4;&#xFF0C;&#x7ED9;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65E0;&#x51B2;&#x7A81;&#x7684;&#x65B9;&#x6CD5;
+--intro                     &#x5728;&#x6253;&#x5305;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x5757;&#x7684;&#x5185;&#x90E8;(wrapper&#x5185;&#x90E8;)&#x7684;&#x6700;&#x9876;&#x90E8;&#x63D2;&#x5165;&#x4E00;&#x6BB5;&#x5185;&#x5BB9;
+--outro                     &#x5728;&#x6253;&#x5305;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x5757;&#x7684;&#x5185;&#x90E8;(wrapper&#x5185;&#x90E8;)&#x7684;&#x6700;&#x5E95;&#x90E8;&#x63D2;&#x5165;&#x4E00;&#x6BB5;&#x5185;&#x5BB9;
+--banner                    &#x5728;&#x6253;&#x5305;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x5757;&#x7684;&#x5916;&#x90E8;(wrapper&#x5916;&#x90E8;)&#x7684;&#x6700;&#x9876;&#x90E8;&#x63D2;&#x5165;&#x4E00;&#x6BB5;&#x5185;&#x5BB9;
+--footer                    &#x5728;&#x6253;&#x5305;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x5757;&#x7684;&#x5916;&#x90E8;(wrapper&#x5916;&#x90E8;)&#x7684;&#x6700;&#x5E95;&#x90E8;&#x63D2;&#x5165;&#x4E00;&#x6BB5;&#x5185;&#x5BB9;
+--interop                   &#x5305;&#x542B;&#x516C;&#x5171;&#x7684;&#x6A21;&#x5757;&#xFF08;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x662F;&#x9ED8;&#x8BA4;&#x6DFB;&#x52A0;&#x7684;&#xFF09;
+</code></pre>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;</p>
+<h4 id="h--help"><code>-h</code>/<code>--help</code></h4>
+<p>&#x6253;&#x5370;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x3002;</p>
+<h4 id="v--version"><code>-v</code>/<code>--version</code></h4>
+<p>&#x6253;&#x5370;&#x5DF2;&#x5B89;&#x88C5;&#x7684;Rollup&#x7248;&#x672C;&#x53F7;&#x3002;</p>
+<h4 id="w--watch"><code>-w</code>/<code>--watch</code></h4>
+<p>&#x76D1;&#x542C;&#x6E90;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6709;&#x6539;&#x52A8;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x6539;&#x52A8;&#xFF0C;&#x91CD;&#x65B0;&#x6253;&#x5305;</p>
+<h4 id="-silent"><code>--silent</code></h4>
+<p>&#x4E0D;&#x8981;&#x5C06;&#x8B66;&#x544A;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02-tutorial.html" class="navigation navigation-prev " aria-label="Previous page: 教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04-javascript-api.html" class="navigation navigation-next " aria-label="Next page: Java Script API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"命令行","level":"1.3","depth":1,"next":{"title":"Java Script API","level":"1.4","depth":1,"path":"04-javascript-api.md","ref":"04-javascript-api.md","articles":[]},"previous":{"title":"教程","level":"1.2","depth":1,"path":"02-tutorial.md","ref":"02-tutorial.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"03-command-line-reference.md","mtime":"2019-12-29T00:08:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-29T00:09:15.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

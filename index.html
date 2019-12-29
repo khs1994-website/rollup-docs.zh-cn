@@ -1,0 +1,372 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>介绍 · Rollup 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="999-big-list-of-options.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="01-faqs.html">
+            
+                <a href="01-faqs.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="02-tutorial.html">
+            
+                <a href="02-tutorial.html">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="03-command-line-reference.html">
+            
+                <a href="03-command-line-reference.html">
+            
+                    
+                    命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="04-javascript-api.html">
+            
+                <a href="04-javascript-api.html">
+            
+                    
+                    Java Script API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="05-tools.html">
+            
+                <a href="05-tools.html">
+            
+                    
+                    Rollup 与其他工具集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="06-es-module-syntax.html">
+            
+                <a href="06-es-module-syntax.html">
+            
+                    
+                    ES模块语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="999-big-list-of-options.html">
+            
+                <a href="999-big-list-of-options.html">
+            
+                    
+                    大选项列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6982;&#x8FF0;overview">&#x6982;&#x8FF0;(Overview)</h3>
+<p>Rollup &#x662F;&#x4E00;&#x4E2A; JavaScript &#x6A21;&#x5757;&#x6253;&#x5305;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5C0F;&#x5757;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#x6210;&#x5927;&#x5757;&#x590D;&#x6742;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F8B;&#x5982; library &#x6216;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;Rollup &#x5BF9;&#x4EE3;&#x7801;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x6807;&#x51C6;&#x5316;&#x683C;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E9B;&#x6807;&#x51C6;&#x90FD;&#x5305;&#x542B;&#x5728; JavaScript &#x7684; ES6 &#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EE5;&#x524D;&#x7684;&#x7279;&#x6B8A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5982; CommonJS &#x548C; AMD&#x3002;ES6 &#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x4F7F;&#x4F60;&#x81EA;&#x7531;&#x3001;&#x65E0;&#x7F1D;&#x5730;&#x4F7F;&#x7528;&#x4F60;&#x6700;&#x559C;&#x7231;&#x7684; library &#x4E2D;&#x90A3;&#x4E9B;&#x6700;&#x6709;&#x7528;&#x72EC;&#x7ACB;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E0D;&#x5FC5;&#x643A;&#x5E26;&#x5176;&#x4ED6;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x3002;ES6 &#x6A21;&#x5757;&#x6700;&#x7EC8;&#x8FD8;&#x662F;&#x8981;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x539F;&#x751F;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x5F53;&#x524D; Rollup &#x53EF;&#x4EE5;&#x4F7F;&#x4F60;&#x63D0;&#x524D;&#x4F53;&#x9A8C;&#x3002;</p>
+<h3 id="&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6307;&#x5357;quick-start">&#x5FEB;&#x901F;&#x5165;&#x95E8;&#x6307;&#x5357;(Quick start)</h3>
+<p>&#x4F7F;&#x7528; <code>npm install --global rollup</code> &#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;Rollup &#x53EF;&#x4EE5;&#x901A;&#x8FC7;<a href="https://github.com/rollup/rollup/wiki/Command-Line-Interface" target="_blank">&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(command line interface)</a>&#x914D;&#x5408;&#x53EF;&#x9009;&#x914D;&#x7F6E;&#x6587;&#x4EF6;(optional configuration file)&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <a href="https://github.com/rollup/rollup/wiki/JavaScript-API" target="_blank">JavaScript API</a>&#x6765;&#x8C03;&#x7528;&#x3002;&#x8FD0;&#x884C; <code>rollup --help</code> &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x53EF;&#x7528;&#x7684;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x3002;</p>
+<blockquote>
+<p>&#x67E5;&#x770B; <a href="https://github.com/rollup/rollup-starter-lib" target="_blank">rollup-starter-lib</a> &#x548C; <a href="https://github.com/rollup/rollup-starter-app" target="_blank">rollup-starter-app</a> &#x4E2D;&#x90A3;&#x4E9B;&#x4F7F;&#x7528; Rollup &#x7684;&#x793A;&#x4F8B;&#x7C7B;&#x5E93;&#x4E0E;&#x5E94;&#x7528;&#x9879;&#x76EE;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x5047;&#x8BBE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x7684;&#x540D;&#x79F0;&#x4E3A; main.js&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x60F3;&#x8981;&#x6240;&#x6709; import &#x7684;&#x4F9D;&#x8D56;(all imports)&#x90FD;&#x7F16;&#x8BD1;&#x5230;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; bundle.js &#x7684;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># compile to a &lt;script&gt; containing a self-executing function (&apos;iife&apos;)</span>
+$ rollup main.js --file bundle.js --format iife
+</code></pre>
+<p>&#x5BF9;&#x4E8E; Node.js:</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># compile to a CommonJS module (&apos;cjs&apos;)</span>
+$ rollup main.js --file bundle.js --format cjs
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x548C; Node.js:</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># UMD format requires a bundle name</span>
+$ rollup main.js --file bundle.js --format umd --name <span class="token string">&quot;myBundle&quot;</span>
+</code></pre>
+<h3 id="&#x4E3A;&#x4EC0;&#x4E48;why">&#x4E3A;&#x4EC0;&#x4E48;(Why)</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5C06;&#x9879;&#x76EE;&#x62C6;&#x5206;&#x6210;&#x5C0F;&#x7684;&#x5355;&#x72EC;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5F00;&#x53D1;&#x8F6F;&#x4EF6;&#x901A;&#x5E38;&#x4F1A;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x901A;&#x5E38;&#x4F1A;&#x6D88;&#x9664;&#x65E0;&#x6CD5;&#x9884;&#x77E5;&#x7684;&#x76F8;&#x4E92;&#x5F71;&#x54CD;(remove unexpected interaction)&#xFF0C;&#x4EE5;&#x53CA;&#x663E;&#x8457;&#x964D;&#x4F4E;&#x4E86;&#x6240;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x7684;&#x590D;&#x6742;&#x5EA6;(complexity of the problem)&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x6700;&#x521D;&#x65F6;&#xFF0C;&#x5C31;&#x7B80;&#x6D01;&#x5730;&#x7F16;&#x5199;&#x5C0F;&#x7684;&#x9879;&#x76EE;&#xFF08;<a href="https://medium.com/@Rich_Harris/small-modules-it-s-not-quite-that-simple-3ca532d65de4" target="_blank">&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x6807;&#x51C6;&#x7B54;&#x6848;</a>&#xFF09;&#x3002;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#xFF0C;JavaScript &#x4EE5;&#x5F80;&#x5E76;&#x6CA1;&#x6709;&#x5C06;&#x6B64;&#x529F;&#x80FD;&#x4F5C;&#x4E3A;&#x8BED;&#x8A00;&#x7684;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x3002;</p>
+<h3 id="tree-shaking">Tree-shaking</h3>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528; ES6 &#x6A21;&#x5757;&#x4E4B;&#x5916;&#xFF0C;Rollup &#x8FD8;&#x9759;&#x6001;&#x5206;&#x6790;&#x4EE3;&#x7801;&#x4E2D;&#x7684; import&#xFF0C;&#x5E76;&#x5C06;&#x6392;&#x9664;&#x4EFB;&#x4F55;&#x672A;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x60A8;&#x67B6;&#x6784;&#x4E8E;&#x73B0;&#x6709;&#x5DE5;&#x5177;&#x548C;&#x6A21;&#x5757;&#x4E4B;&#x4E0A;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x589E;&#x52A0;&#x989D;&#x5916;&#x7684;&#x4F9D;&#x8D56;&#x6216;&#x4F7F;&#x9879;&#x76EE;&#x7684;&#x5927;&#x5C0F;&#x81A8;&#x80C0;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4F7F;&#x7528; CommonJS &#x65F6;&#xFF0C;<em>&#x5FC5;&#x987B;&#x5BFC;&#x5165;(import)&#x5B8C;&#x6574;&#x7684;&#x5DE5;&#x5177;(tool)&#x6216;&#x5E93;(library)&#x5BF9;&#x8C61;</em>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x4F7F;&#x7528; CommonJS &#x5BFC;&#x5165;(import)&#x5B8C;&#x6574;&#x7684; utils &#x5BF9;&#x8C61;</span>
+<span class="token keyword">var</span> utils <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">&apos;utils&apos;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> query <span class="token operator">=</span> <span class="token string">&apos;Rollup&apos;</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x4F7F;&#x7528; utils &#x5BF9;&#x8C61;&#x7684; ajax &#x65B9;&#x6CD5;</span>
+utils<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span> <span class="token string">&apos;https://api.example.com?search=&apos;</span> <span class="token operator">+</span> query <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> handleResponse <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4F46;&#x662F;&#x5728;&#x4F7F;&#x7528; ES6 &#x6A21;&#x5757;&#x65F6;&#xFF0C;&#x65E0;&#x9700;&#x5BFC;&#x5165;&#x6574;&#x4E2A; <code>utils</code> &#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53EA;&#x5BFC;&#x5165;(import)&#x6211;&#x4EEC;&#x6240;&#x9700;&#x7684; <code>ajax</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x4F7F;&#x7528; ES6 import &#x8BED;&#x53E5;&#x5BFC;&#x5165;(import) ajax &#x51FD;&#x6570;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ajax <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;utils&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> query <span class="token operator">=</span> <span class="token string">&apos;Rollup&apos;</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x8C03;&#x7528; ajax &#x51FD;&#x6570;</span>
+<span class="token function">ajax</span><span class="token punctuation">(</span> <span class="token string">&apos;https://api.example.com?search=&apos;</span> <span class="token operator">+</span> query <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> handleResponse <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A; Rollup &#x53EA;&#x5F15;&#x5165;&#x6700;&#x57FA;&#x672C;&#x6700;&#x7CBE;&#x7B80;&#x4EE3;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x8F7B;&#x91CF;&#x3001;&#x5FEB;&#x901F;&#xFF0C;&#x4EE5;&#x53CA;&#x4F4E;&#x590D;&#x6742;&#x5EA6;&#x7684; library &#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x79CD;&#x57FA;&#x4E8E;&#x663E;&#x5F0F;&#x7684; <code>import</code> &#x548C; <code>export</code> &#x8BED;&#x53E5;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x8FDC;&#x6BD4;&#x300C;&#x5728;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x8F93;&#x51FA;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x7B80;&#x5355;&#x5730;&#x8FD0;&#x884C;&#x81EA;&#x52A8; minifier &#x68C0;&#x6D4B;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#x300D;&#x66F4;&#x6709;&#x6548;&#x3002;</p>
+<h3 id="&#x517C;&#x5BB9;&#x6027;compatibility">&#x517C;&#x5BB9;&#x6027;(Compatibility)</h3>
+<h4 id="&#x5BFC;&#x5165;-commonjsimporting-commonjs">&#x5BFC;&#x5165; CommonJS(Importing CommonJS)</h4>
+<p>Rollup &#x53EF;&#x4EE5;<a href="https://github.com/rollup/rollup-plugin-commonjs" target="_blank">&#x901A;&#x8FC7;&#x63D2;&#x4EF6;</a>&#x5BFC;&#x5165;&#x5DF2;&#x5B58;&#x5728;&#x7684; CommonJS &#x6A21;&#x5757;&#x3002;</p>
+<h4 id="&#x53D1;&#x5E03;-es6-&#x6A21;&#x5757;publishing-es6-modules">&#x53D1;&#x5E03; ES6 &#x6A21;&#x5757;(Publishing ES6 Modules)</h4>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x4F60;&#x7684; ES6 &#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4E0E;&#x300C;&#x8FD0;&#x884C;&#x5728; CommonJS&#xFF08;&#x4F8B;&#x5982; Node.js &#x548C; webpack&#xFF09;&#x4E2D;&#x7684;&#x5DE5;&#x5177;(tool)&#x300D;&#x4F7F;&#x7528;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Rollup &#x7F16;&#x8BD1;&#x4E3A; UMD &#x6216; CommonJS &#x683C;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x5728; <code>package.json</code> &#x6587;&#x4EF6;&#x7684; <code>main</code> &#x5C5E;&#x6027;&#x4E2D;&#x6307;&#x5411;&#x5F53;&#x524D;&#x7F16;&#x8BD1;&#x7684;&#x7248;&#x672C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684; <code>package.json</code> &#x4E5F;&#x5177;&#x6709; <code>module</code> &#x5B57;&#x6BB5;&#xFF0C;&#x50CF; Rollup &#x548C; <a href="https://webpack.js.org/" target="_blank">webpack 2</a> &#x8FD9;&#x6837;&#x7684; ES6 &#x611F;&#x77E5;&#x5DE5;&#x5177;(ES6-aware tools)&#x5C06;&#x4F1A;&#x76F4;&#x63A5;<a href="https://github.com/rollup/rollup/wiki/pkg.module" target="_blank">&#x5BFC;&#x5165; ES6 &#x6A21;&#x5757;&#x7248;&#x672C;</a>&#x3002;</p>
+<h3 id="&#x53C2;&#x8003;&#x94FE;&#x63A5;links">&#x53C2;&#x8003;&#x94FE;&#x63A5;(Links)</h3>
+<ul>
+<li>step-by-step <a href="https://code.lengstorf.com/learn-rollup-js/" target="_blank">tutorial video series</a>, with accompanying written walkthrough</li>
+<li>miscellaneous issues in the <a href="https://github.com/rollup/rollup/wiki" target="_blank">wiki</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://rollupjs.org/#introduction" target="_blank">https://rollupjs.org/#introduction</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="999-big-list-of-options.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 大选项列表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.8","depth":1,"previous":{"title":"大选项列表","level":"1.7","depth":1,"path":"999-big-list-of-options.md","ref":"999-big-list-of-options.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Rollup 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"README.md","mtime":"2019-12-29T00:08:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-29T00:09:15.543Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
